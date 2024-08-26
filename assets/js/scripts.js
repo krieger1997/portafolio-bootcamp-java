@@ -11,10 +11,11 @@ btn.addEventListener('click', (ev) => {
     ev.preventDefault();
     if (validaForm()) {
         btn.setAttribute('disabled', true);
+        document.getElementById('texto-submit').innerText="Enviando...";
         cargando.classList.remove('d-none');
         setTimeout(() => {
             simulaEnviado();
-        }, 2000);
+        }, 2500);
     }
 });
 
@@ -23,7 +24,7 @@ function simulaEnviado() {
 
     form.reset();
     cargando.classList.add('d-none');
-
+    document.getElementById('texto-submit').innerText="Enviar";
     btn.removeAttribute('disabled');
     alerta.show();
 
