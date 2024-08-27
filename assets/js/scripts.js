@@ -13,7 +13,7 @@ btn.addEventListener('click', (ev) => {
         btn.setAttribute('disabled', true);
         document.getElementById('texto-submit').innerText="Enviando...";
         cargando.classList.remove('d-none');
-        setTimeout(() => {
+        setTimeout(() => {//se usa para ejecutar funcion luego de 2.5 segundos
             simulaEnviado();
         }, 2500);
     }
@@ -21,7 +21,7 @@ btn.addEventListener('click', (ev) => {
 
 
 const navLinks = document.getElementsByClassName('nav-link');
-const arrNavLinks = Array.from(navLinks);
+const arrNavLinks = Array.from(navLinks);//se crea array desde conjunto de elementos capturados con getElementsByClassName('nav-link');
 for (const navLink of navLinks) {
     navLink.addEventListener('click',(ev)=>{
         arrNavLinks.forEach(el => el.classList.remove('active'));
@@ -60,5 +60,5 @@ function validaForm() {
 
 function validaEmail(email) {
     var expresionReg = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return expresionReg.test(email);
+    return expresionReg.test(email);//se valida formato de email 
   }
