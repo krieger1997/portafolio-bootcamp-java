@@ -19,6 +19,10 @@ main {
     min-height: 700px;
 }
 
+#habilidades,#proyectos{
+    padding-top: 80px;
+}
+
 #contenedor-rostro {
     height: 600px;
     width: fit-content;

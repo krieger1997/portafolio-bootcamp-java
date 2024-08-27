@@ -20,6 +20,16 @@ btn.addEventListener('click', (ev) => {
 });
 
 
+const navLinks = document.getElementsByClassName('nav-link');
+const arrNavLinks = Array.from(navLinks);
+for (const navLink of navLinks) {
+    navLink.addEventListener('click',(ev)=>{
+        arrNavLinks.forEach(el => el.classList.remove('active'));
+        navLink.classList.add('active');
+    })    
+}
+
+
 function simulaEnviado() {
 
     form.reset();
